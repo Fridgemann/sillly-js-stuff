@@ -17,6 +17,7 @@ html, body {
     border-radius: 5px;
     gap: 5px;
     background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .row {
@@ -26,7 +27,7 @@ html, body {
 }
 
 .calc-button {
-    background-color: black;
+    background-color: rgb(27, 11, 148);
     color: white;
     font-size: 2.5em;
     display: flex;
@@ -34,16 +35,17 @@ html, body {
     padding: 10px;
     border-radius: 5px;
     justify-content: center;
+    border: 0;
 }
 
 #result-display {
     font-size: 3em;
-    padding: 5px; /* Text aligning doesnt work because of the 2nd padding */
+    padding: 5px 10px; /* Text aligning doesnt work because of the 2nd padding */
     background-color: rgb(83, 77, 77);
     color: white;
     margin: 3.5px;
     border-radius: 5px;   
-    width: 300px;
+    width: 400px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -51,7 +53,7 @@ html, body {
 
 
 #zero-btn {
-    flex: 2 215px; /* 10px + because of the gap in .row and #calculator */
+    flex: 2 205px; /* 10px + because of the gap in .row and #calculator */
     justify-content: center;
 }
 
