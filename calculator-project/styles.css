@@ -20,7 +20,7 @@ html, body {
 
 .row {
     display: flex;
-    gap: 2px;
+    gap: 5px;
 }
 
 .calc-button {
@@ -28,6 +28,7 @@ html, body {
     color: white;
     font-size: 2.5em;
     flex: 1 1 100px;
+    padding: 10px;
 }
 
 #result-display {
@@ -36,3 +37,16 @@ html, body {
     padding: 5px 150px;
 }
 
+#zero-btn {
+    display: flex;
+    flex: 2 1 215px;
+    justify-content: center;
+}
+
+.operation {
+    background-color: olivedrab;
+}
+
+.topside {
+    background-color: maroon;
+}
