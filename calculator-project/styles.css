@@ -29,24 +29,29 @@ html, body {
     background-color: black;
     color: white;
     font-size: 2.5em;
-    flex: 1 1 100px;
+    display: flex;
+    flex: 1 100px;
     padding: 10px;
     border-radius: 5px;
+    justify-content: center;
 }
 
 #result-display {
     font-size: 3em;
-    padding: 5px 150px;
+    padding: 5px; /* Text aligning doesnt work because of the 2nd padding */
     background-color: rgb(83, 77, 77);
     color: white;
     margin: 3.5px;
-    border-radius: 5px;
-    text-align: end;
+    border-radius: 5px;   
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
+
 #zero-btn {
-    display: flex;
-    flex: 2 1 210px;
+    flex: 2 215px; /* 10px + because of the gap in .row and #calculator */
     justify-content: center;
 }
 
