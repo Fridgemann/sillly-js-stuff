@@ -109,6 +109,11 @@ numBtns.forEach(elem => {
                     resultDisplay.textContent = -(Number(resultDisplay.textContent));
                 }
                 break;
+            case '%':
+                if (resultDisplay.textContent !== 0) {
+                    resultDisplay.textContent = Number(resultDisplay.textContent) / 100;
+                }
+                break;
             default:
                 if (elem.textContent === '=') {
                     calculateEquals();
