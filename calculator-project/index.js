@@ -101,6 +101,14 @@ numBtns.forEach(elem => {
                 console.log(result);
                 console.log(nums);
                 break;
+            case 'AC':
+                resultDisplay.textContent = 0;
+                break;
+            case '+/-':
+                if (resultDisplay.textContent !== 0) {
+                    resultDisplay.textContent = -(Number(resultDisplay.textContent));
+                }
+                break;
             default:
                 if (elem.textContent === '=') {
                     calculateEquals();
@@ -114,6 +122,7 @@ numBtns.forEach(elem => {
                 else if (!(resultDisplay.textContent.length === 15)) {
                     resultDisplay.textContent += elem.textContent;
                 }
+                
         }
         
         
