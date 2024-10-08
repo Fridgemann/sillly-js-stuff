@@ -148,5 +148,5 @@ numBtns.forEach(elem => {
 })
 
 
-//What if i store them in an array? YES
+//What if i store them in an array?
 //15
