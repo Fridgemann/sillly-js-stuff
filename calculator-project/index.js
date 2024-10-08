@@ -27,6 +27,7 @@ const resultDisplay = document.querySelector('#result-display');
 let nums = [];
 let opOrder = [];
 let result = 0;
+let divisonZeroAlert = false;
 
 function detectInitialOperationType() {
     if (opOrder[0] === '*' || opOrder[0] === '/') {
@@ -55,7 +56,12 @@ function calculateEquals () {
             result *= Number(resultDisplay.textContent);
             break;
         case '/':
-            result /= Number(resultDisplay.textContent);
+            if (Number(resultDisplay.textContent) === 0) {
+                divisonZeroAlert = true;
+            }
+            else {
+                result /= Number(resultDisplay.textContent);
+            }
             break;
     }
 
@@ -114,10 +120,15 @@ numBtns.forEach(elem => {
                     resultDisplay.textContent = Number(resultDisplay.textContent) / 100;
                 }
                 break;
+            case '.':
+                if (!(resultDisplay.textContent.includes('.'))) {
+                    resultDisplay.textContent += elem.textContent;
+                }
+                break;
             default:
                 if (elem.textContent === '=') {
                     calculateEquals();
-                    resultDisplay.textContent = result;
+                    resultDisplay.textContent = divisonZeroAlert ? "nope" : result;
                     nums.length = 0;
                     opOrder.length = 0;
                 }
